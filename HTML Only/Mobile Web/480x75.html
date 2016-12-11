@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mobile Web 480x75</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="https://www.minimamente.com/example/magic_animations/css/magic.min.css">
+	<style>
+		@font-face {
+		font-family: 'Riona Sans';
+		src: url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Flip/300X600/fonts/RionaSans-Bold.eot');
+		src: url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Flip/300X600/fonts/RionaSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Flip/300X600/fonts/RionaSans-Bold.woff') format('woff'),
+		url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Flip/300X600/fonts/RionaSans-Bold.ttf') format('truetype');
+		font-weight: bold;
+		font-style: normal;
+		}
+		body{font-family: 'Riona Sans';font-style:normal;color: white;}
+		.title{line-height: 20px;}
+	</style>
+</head>
+<body>
+	<div style="width: 480px;height: 75px;background: url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Mobile%20Web/480x75/images/background.jpg');background-size: cover;">
+		<img src="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Mobile%20Web/480x75/images/particles.png" style="position: absolute;" class="animated infinite flash">
+		<div>
+			<img class="big magictime spaceInLeft" src="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Mobile%20Web/480x75/images/big.png" style="width: 45px;margin-left: 55px;float: left;padding-top: 10px;">
+			<h6 class="big magictime spaceInLeft" style="text-align: center;line-height: 14px;position: absolute;margin: 2.5em 0em 0em 9.3em;">18th - 21st<br>Dec</h6>	
+			<h2 class="win magictime spaceInRight" style="text-align: center;line-height: 14px;position: absolute;margin: 1.5em 0em 0em 6.5em;">=</h2>
+			<h6 class="text magictime vanishIn" style="text-align: center;position: absolute;margin: 4.5em 0em 0em 19.5em;color: #2271c0;font-size: .6em;line-height: 12px;">Big big<br>offers</h6>
+			<h2 class="win magictime spaceInRight" style="text-align: center;line-height: 14px;position: absolute;margin: 1.5em 0em 0em 10.3em;">+</h2>
+			<h6 class="text magictime vanishIn" style="text-align: center;position: absolute;margin: 3.5em 0em 0em 28.8em;color: #2271c0;font-size: 0.6em;line-height: 10px;">A chance<br>to win free*<br>shopping</h6>
+			<h5 class="win magictime spaceInRight" style="text-align: center;line-height: 14px;position: absolute;margin: 2.5em 0em 0em 26em;">WIN-WIN Offer</h5>
+			<img src="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Mobile%20Web/480x75/images/flipkart.png" style="float: right;width: 75px;padding: 5px 10px;">
+			
+		</div>
+		
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>
+		setInterval(function(){ 
+		$('.big').toggleClass('magictime spaceInLeft');
+		}, 1000 );
+		setInterval(function(){ 
+		$('.text').toggleClass('magictime vanishIn');
+		}, 1000 );
+		setInterval(function(){ 
+		$('.win').toggleClass('magictime spaceInRight');
+		}, 1000 );
+	</script>
+</body>
+</html>

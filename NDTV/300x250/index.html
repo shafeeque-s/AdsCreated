@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<link href='simplelightbox.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	
+		<div class="gallery">
+			<a href="images/image2.jpg"><img src="images/thumbs/thumb2.jpg" alt="" title=""/></a>
+			<a href="images/image1.jpg"></a>
+			<a href="images/image3.jpg"></a>
+		</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="simple-lightbox.js"></script>
+<script>
+
+	$gallery = $('.gallery a').simpleLightbox();
+	$gallery.hover(function(){
+        timer = setTimeout(function(){
+            console.log('do it');
+            $gallery.simpleLightbox().open();
+        },  1000);
+    }, function(){
+        clearTimeout(timer);
+    });
+	/*$gallery.simpleLightbox().open();
+	$gallery.simpleLightbox().close();*/
+</script>
+</body>
+</html>
