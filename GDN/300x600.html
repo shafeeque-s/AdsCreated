@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GDN 300x600</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="https://www.minimamente.com/example/magic_animations/css/magic.min.css">
+	<style>
+		@font-face {
+		font-family: 'Riona Sans';
+		src: url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Flip/300X600/fonts/RionaSans-Bold.eot');
+		src: url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Flip/300X600/fonts/RionaSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Flip/300X600/fonts/RionaSans-Bold.woff') format('woff'),
+		url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/Flip/300X600/fonts/RionaSans-Bold.ttf') format('truetype');
+		font-weight: bold;
+		font-style: normal;
+		}
+		body{font-family: 'Riona Sans';font-style:normal;color: white;}
+		.title{line-height: 20px;}
+	</style>
+</head>
+<body>
+	<div style="width: 300px;height: 600px;background: url('300X600/images/background.jpg');">
+		<img src="300X600/images/particles.png" style="position: absolute;" class="animated infinite flash">
+		<div style="text-align: center;padding-top: 2em;">
+			<div style="margin-bottom: 15px;">
+				<img src="300X600/images/flipkart.png">
+			</div>
+			<div>
+				<img src="300X600/images/big.png" class="magictime slideRightReturn" id="big">
+			</div>
+			<div>
+				<h3 class="title magictime slideRightReturn" id="text">Big big offers<br><span style="font-size: 50px;line-height: 55px;">+</span><br>A chance to win<br>free* shopping</h3>
+				<h3  style="color:#fce400;">It's a WIN-WIN Offer</h3>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>
+		setInterval(function(){ 
+		$('#big').toggleClass('magictime slideRightReturn');
+		}, 1000 );
+		setInterval(function(){ 
+		$('#text').toggleClass('magictime slideRightReturn');
+		}, 1000 );
+	</script>
+</body>
+</html>
