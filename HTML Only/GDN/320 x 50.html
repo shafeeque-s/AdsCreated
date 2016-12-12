@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>GDN 320 x 50</title>
+	<link href='https://rawgit.com/shafeeque-s/AdsCreated/master/NDTV/300x250/simplelightbox.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="https://www.minimamente.com/example/magic_animations/css/magic.min.css">
 	<style>
@@ -16,10 +17,20 @@
 		}
 		body{font-family: 'Riona Sans';font-style:normal;color: white;}
 		.title{line-height: 20px;}
+		.sl-wrapper .sl-close{
+			color: #30a3f6;
+		}
 	</style>
 </head>
 <body>
-	<div style="width: 320px;height: 50px;background: url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/GDN/320 x 50/images/background.jpg');background-size: cover;border: 1px solid #0094da;">
+	<div class="gallery" style="cursor:pointer;width: 320px;height: 50px;background: url('https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/GDN/320 x 50/images/background.jpg');background-size: cover;border: 1px solid #0094da;">
+
+		<div class="loader" style="display:none;width: 320px;height: 50px;position: fixed;background: rgba(255, 255, 255, 0.72);z-index: 999;text-align: center;">
+			<img src="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/NDTV/300x250/images/loading.gif" style="width: 100px;padding-top: 20px;">
+		</div>
+
+		<a href="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/NDTV/300x250/images/expanded_banner1.jpg" style="color: white;text-decoration: none;">
+
 		<img src="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/GDN/320 x 50/images/particles.png" style="position: absolute;" class="animated infinite flash">
 		<div>
 			<img src="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/GDN/320 x 50/images/big.png" style="width: 35px;float: left;padding: 5px 0px 0px 35px;" id="big" class="big magictime spaceInLeft">
@@ -30,12 +41,39 @@
 			<h6 style="position: absolute;margin: 0;padding: 4px 0px 0px 170px;font-size: 1em;text-align: center;    color: #fff200;">+</h6>
 			<h6 style="\: absolute;position: absolute;margin: 0;padding: 5px 0px 0px 188px;text-align: center;font-size: .55em;">A chance to win<br>free* shopping</h6>
 			<h5 style="color: #fef200;padding: 8px 0px 0px 133px;text-align: center;position: absolute;font-size: .77em;">It's a WIN-WIN Offer</h5>
-			<img src="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/GDN/320 x 50/images/flipkart.png" style="float: right;padding: 3px 5px 0px 0px;width: 55px;">
 			</div>
+			<img src="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/GDN/320 x 50/images/flipkart.png" style="float: right;padding: 3px 5px 0px 0px;width: 55px;">
 		</div>
+		</a>
 		
+
+		<a href="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/NDTV/300x250/images/expanded_banner2.jpg"></a>
+		<a href="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/NDTV/300x250/images/expanded_banner3.jpg"></a>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/shafeeque-s/AdsCreated/master/NDTV/300x250/simple-lightbox.js"></script>
+	<script>
+		$gallery = $('.gallery a').simpleLightbox();
+
+		
+		$('.loader').hover(function(){
+	        timer = setTimeout(function(){
+	           $gallery.simpleLightbox().open();
+	        },  1000);
+	    }, function(){
+	        clearTimeout(timer);
+	    });
+	    $('.loader').click(function(){
+	    	$gallery.simpleLightbox().open();
+	    });
+	    $('.gallery').mouseover(function(){
+	    	$(".loader").show();
+	    });
+	    $('.gallery').mouseout(function(){
+	    	$(".loader").hide();
+	    	//clearInterval(handle);
+	    });	    
+	</script>
 	<script>
 		setInterval(function(){ 
 		$('.big').toggleClass('magictime spaceInLeft');

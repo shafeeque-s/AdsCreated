@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>GDN Web 468x60</title>
+	<link href='https://rawgit.com/shafeeque-s/AdsCreated/master/NDTV/300x250/simplelightbox.css' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="https://www.minimamente.com/example/magic_animations/css/magic.min.css">
 	<style>
@@ -16,10 +17,19 @@
 		}
 		body{font-family: 'Riona Sans';font-style:normal;color: white;}
 		.title{line-height: 20px;}
+		.sl-wrapper .sl-close{
+			color: #30a3f6;
+		}
 	</style>
 </head>
 <body>
-	<div style="width: 468px;height: 60px;background: url('468x60/images/background.jpg');background-size: cover;">
+	<div class="gallery" style="cursor:pointer;width: 468px;height: 60px;background: url('468x60/images/background.jpg');background-size: cover;">
+
+		<div class="loader" style="display:none;width: 468px;height: 60px;position: fixed;background: rgba(255, 255, 255, 0.72);z-index: 999;text-align: center;">
+			<img src="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/NDTV/300x250/images/loading.gif" style="width: 100px;padding-top: 25px;">
+		</div>
+
+		<a href="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/NDTV/300x250/images/expanded_banner1.jpg" style="color: white;text-decoration: none;">
 		<img src="468x60/images/particles.png" style="position: absolute;" class="animated infinite flash">
 		<div>
 			<img src="468x60/images/big.png" style="width: 45px;margin-left: 40px;float: left;padding-top: 3px;">
@@ -32,8 +42,34 @@
 			<img src="468x60/images/flipkart.png" style="float: right;width: 75px;padding: 5px 10px;">
 			
 		</div>
-		
+		</a>
+
+		<a href="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/NDTV/300x250/images/expanded_banner2.jpg"></a>
+		<a href="https://raw.githubusercontent.com/shafeeque-s/AdsCreated/master/NDTV/300x250/images/expanded_banner3.jpg"></a>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/shafeeque-s/AdsCreated/master/NDTV/300x250/simple-lightbox.js"></script>
+	<script>
+		$gallery = $('.gallery a').simpleLightbox();
+
+		
+		$('.loader').hover(function(){
+	        timer = setTimeout(function(){
+	           $gallery.simpleLightbox().open();
+	        },  1000);
+	    }, function(){
+	        clearTimeout(timer);
+	    });
+	    $('.loader').click(function(){
+	    	$gallery.simpleLightbox().open();
+	    });
+	    $('.gallery').mouseover(function(){
+	    	$(".loader").show();
+	    });
+	    $('.gallery').mouseout(function(){
+	    	$(".loader").hide();
+	    	//clearInterval(handle);
+	    });	    
+	</script>
 </body>
 </html>
